@@ -1,0 +1,28 @@
+{
+  "mcpServers": {
+    "xcode": {
+      "command": "/tmp/XcodeMCPWrapper/.venv/bin/python",
+      "args": [
+        "-m",
+        "mcpbridge_wrapper"
+      ]
+    },
+    "xcodebuildmcp": {
+      "command": "xcodebuildmcp",
+      "args": [
+        "mcp"
+      ]
+    },
+    "doctor-address-verifier": {
+      "command": "swift",
+      "args": [
+        "package",
+        "--package-path",
+        "/Users/alep/Downloads/02_AI_Agents/DoctorAddressVerifier",
+        "show-dependencies"
+      ],
+      "disabled": true,
+      "description": "Project marker for Windsurf. Enable only after replacing this with a real project-specific MCP server."
+    }
+  }
+}

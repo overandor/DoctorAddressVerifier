@@ -1,0 +1,14 @@
+# DoctorAddressVerifier MCP bridge for ChatGPT/Codex.
+#
+# Copy these sections into:
+#   ~/.codex/config.toml
+#
+# Keep this project copy as the shared reference for Xcode-aware AI tooling.
+
+[mcp_servers.xcode]
+command = "/tmp/XcodeMCPWrapper/.venv/bin/python"
+args = ["-m", "mcpbridge_wrapper"]
+
+[mcp_servers.xcodebuildmcp]
+command = "xcodebuildmcp"
+args = ["mcp"]

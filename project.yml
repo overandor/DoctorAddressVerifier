@@ -1,0 +1,46 @@
+name: DoctorAddressVerifier
+options:
+  bundleIdPrefix: com.membra
+  deploymentTarget:
+    macOS: "13.0"
+settings:
+  base:
+    PRODUCT_NAME: DoctorAddressVerifier
+    PRODUCT_BUNDLE_IDENTIFIER: com.membra.doctor-address-verifier
+    SWIFT_VERSION: "5.9"
+    MACOSX_DEPLOYMENT_TARGET: "13.0"
+    ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+    ENABLE_PREVIEWS: YES
+    CODE_SIGN_STYLE: Automatic
+    DEVELOPMENT_TEAM: ZKKA58M5W9
+    COMBINE_HIDPI_IMAGES: YES
+    CURRENT_PROJECT_VERSION: "1"
+    MARKETING_VERSION: "1.0.0"
+targets:
+  DoctorAddressVerifier:
+    type: application
+    platform: macOS
+    sources:
+      - Sources/DoctorAddressVerifier
+    resources:
+      - DoctorAddressVerifier/Assets.xcassets
+    settings:
+      base:
+        INFOPLIST_FILE: Sources/DoctorAddressVerifier/Info.plist
+        CODE_SIGN_ENTITLEMENTS: DoctorAddressVerifier.entitlements
+        ENABLE_HARDENED_RUNTIME: YES
+        APP_SANDBOX_ENABLED: YES
+    postCompileScripts:
+      - name: Copy App Icon
+        script: |
+          mkdir -p "${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/"
+          cp "${PROJECT_DIR}/DoctorAddressVerifier.icns" "${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/"
+schemes:
+  DoctorAddressVerifier:
+    build:
+      targets:
+        DoctorAddressVerifier: all
+    run:
+      config: Debug
+    archive:
+      config: Release
