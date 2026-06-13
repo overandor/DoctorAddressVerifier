@@ -61,6 +61,7 @@
 			buildPhases = (
 				6C394111E4FD997817637B96 /* Sources */,
 				15BAE27C66FBCF06EBC44F84 /* Copy App Icon */,
+				68985DDAD86863663D2A266A /* Copy CLI */,
 			);
 			buildRules = (
 			);
@@ -125,6 +126,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "mkdir -p \"${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/\"\ncp \"${PROJECT_DIR}/DoctorAddressVerifier.icns\" \"${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/\"\n";
+		};
+		68985DDAD86863663D2A266A /* Copy CLI */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Copy CLI";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "CLI_PATH=\"${PROJECT_DIR}/../DoctorAddressVerifierCLI/dist/cli.js\"\nif [ -f \"$CLI_PATH\" ]; then\n  mkdir -p \"${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/cli/dist\"\n  cp \"$CLI_PATH\" \"${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/cli/dist/\"\n  echo \"✓ CLI copied to app bundle\"\nelse\n  echo \"⚠ CLI not found at $CLI_PATH\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 

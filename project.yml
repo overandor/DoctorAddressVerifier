@@ -35,6 +35,16 @@ targets:
         script: |
           mkdir -p "${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/"
           cp "${PROJECT_DIR}/DoctorAddressVerifier.icns" "${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/"
+      - name: Copy CLI
+        script: |
+          CLI_PATH="${PROJECT_DIR}/../DoctorAddressVerifierCLI/dist/cli.js"
+          if [ -f "$CLI_PATH" ]; then
+            mkdir -p "${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/cli/dist"
+            cp "$CLI_PATH" "${BUILT_PRODUCTS_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/cli/dist/"
+            echo "✓ CLI copied to app bundle"
+          else
+            echo "⚠ CLI not found at $CLI_PATH"
+          fi
 schemes:
   DoctorAddressVerifier:
     build:
