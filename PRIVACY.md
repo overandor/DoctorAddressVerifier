@@ -57,7 +57,7 @@ We may update this privacy policy from time to time. We will notify you of any m
 ## Contact
 If you have questions about this privacy policy, please contact us at:
 - Email: j.skrobynets@gmail.com
-- GitHub: https://github.com/yourusername/DoctorAddressVerifier/issues
+- GitHub: https://github.com/overandor/DoctorAddressVerifier/issues
 
 ## Compliance
 This app is designed to comply with:

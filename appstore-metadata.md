@@ -46,13 +46,13 @@ Perfect for medical groups, hospitals, insurance companies, and healthcare recru
 doctor, address, verification, nppes, healthcare, medical, provider, validation, physician, npi, medicare, license, credentialing
 
 ## Support URL
-https://github.com/yourusername/DoctorAddressVerifier/issues
+https://github.com/overandor/DoctorAddressVerifier/issues
 
 ## Marketing URL
-https://github.com/yourusername/DoctorAddressVerifier
+https://github.com/overandor/DoctorAddressVerifier
 
 ## Privacy Policy URL
-https://github.com/yourusername/DoctorAddressVerifier/blob/main/PRIVACY.md
+https://github.com/overandor/DoctorAddressVerifier/blob/main/PRIVACY.md
 
 ## App Category
 Medical
